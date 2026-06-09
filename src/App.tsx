@@ -42,14 +42,16 @@ export default function App() {
   }, []);
 
   const moveNoButton = () => {
-    if (!buttonAreaRef.current || !noButtonRef.current) return;
+    if (!noButtonRef.current) return;
 
-    const areaRect = buttonAreaRef.current.getBoundingClientRect();
     const buttonRect = noButtonRef.current.getBoundingClientRect();
-    const maxLeft = Math.max(areaRect.width - buttonRect.width, 0);
-    const maxTop = Math.max(areaRect.height - buttonRect.height, 0);
-    const left = Math.random() * maxLeft;
-    const top = Math.random() * maxTop;
+    
+    // Bounds restricted to the entire viewport with some padding so it doesn't clip
+    const maxLeft = Math.max(window.innerWidth - buttonRect.width - 20, 0);
+    const maxTop = Math.max(window.innerHeight - buttonRect.height - 20, 0);
+    
+    const left = 10 + Math.random() * maxLeft;
+    const top = 10 + Math.random() * maxTop;
 
     setRunCount((prev) => prev + 1);
 
