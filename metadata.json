@@ -1,0 +1,6 @@
+{
+  "name": "Convite Date",
+  "description": "Um convite interativo e divertido, clonado do repositório convite-date.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

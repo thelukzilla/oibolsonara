@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Um convite nada suspeito</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="date-card" aria-live="polite">
+      <section class="question-panel" id="questionPanel">
+        <div class="tiny-note">pergunta importante</div>
+        <h1>Você aceita sair comigo?</h1>
+        <p>
+          Prometo escolher um lugar gostoso, chegar cheiroso e fingir que esse
+          site não levou horas emocionais pra ficar fofo.
+        </p>
+
+        <div class="button-area" id="buttonArea">
+          <button class="yes-button" id="yesButton" type="button">Sim</button>
+          <button class="no-button" id="noButton" type="button">Não</button>
+        </div>
+      </section>
+
+      <section class="answer-panel" id="answerPanel" hidden>
+        <div class="ticket" aria-hidden="true">
+          <span class="ticket-line"></span>
+          <span class="ticket-heart">♥</span>
+          <span class="ticket-line"></span>
+        </div>
+        <h2>Fechado. Agora é oficialmente um encontro.</h2>
+        <p>Pode mandar o print com um "sim" bem bonito. Eu cuido do resto.</p>
+        <button class="reset-button" id="resetButton" type="button">
+          Ver de novo
+        </button>
+      </section>
+    </main>
+
+    <canvas class="confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+    <script src="./script.js"></script>
+  </body>
+</html>
